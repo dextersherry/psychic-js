@@ -1,0 +1,146 @@
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: lavender;
+    color: black;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+img:not(.person-img) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+
+/*  global classes */
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    font-size: 10px;
+}
+
+h4:hover {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #e0e1e3;
+}
+
+
+/*
+  =============== 
+  ! Slider
+  ===============
+  */
+
+.slider-container {
+    border: 5px solid lavender;
+    width: 50vw;
+    margin: 0 auto;
+    height: 40vh;
+    max-width: 80rem;
+    position: relative;
+    border-radius: 2%;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: gainsboro;
+    color: white;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+
+.slide-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide h1 {
+    font-size: 5rem;
+}
+
+.person-img {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.person-img:hover {
+    opacity: 1;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.prevBtn,
+.nextBtn {
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    /* color: var(--clr-grey-5); */
+    transition: all 2ms;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    color: #3d3d3d;
+}
+
+@media screen and (min-width: 576px) {
+    .slider-container {
+        height: 45vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slider-container {
+        height: 55vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .slider-container {
+        height: 65vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}
